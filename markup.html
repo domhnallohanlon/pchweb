@@ -95,8 +95,49 @@
 		</div> <!-- end of navbar -->
 		<div class="container">
 			<div class="row">
-				<h1 class="text-center">HTML</h1>
+				<h2 class="text-center">HTML</h2>
+				HTML, or Hypertext Markup Language is the language of the web. It gives structure to web pages by controlling where text, images, links, lists and forms are placed on a page. The aesthetic appearance is controled with<a href="styles.html"> style sheets,</a> which we will cover in greater detail in the next section.
 			</div> <!-- end of row -->
+			<div class="row">
+				<h3>Example 1</h3>
+				<p>This first example creates a simple HTML document with two sections, the head and the body. On the body of the page we then display some text, formatted in a variety of different ways.</p>
+				<!-- Button trigger modal -->
+				<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#pre1">
+				  Preview this Example
+				</button>
+
+				<button class="btn btn-primary btn-lg view-sauce" type="button" data-toggle="collapse" data-target="#src1" aria-expanded="false" aria-controls="src1">
+				  View Source Code
+				</button>
+
+				<a href="sample_code/page1.html" target="_blank" class="btn btn-primary btn-lg">Open in New Tab</a>
+
+				<div class="collapse" id="src1">
+				  <div class="well">
+				    <pre data-src="sample_code/page1.html">
+
+				    </pre>
+				  </div>
+				</div>
+
+				<!-- Modal -->
+				<div class="modal fade" id="pre1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				  <div class="modal-dialog" role="document">
+				    <div class="modal-content">
+				      <div class="modal-header">
+				        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				        <h4 class="modal-title" id="myModalLabel">Domhnall's Page</h4>
+				      </div>
+				      <div class="modal-body" id="ex1">
+								
+				      </div>
+				      <div class="modal-footer">
+				        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+			</div>
 		</div> <!-- end of container -->
 
 		<!-- jQuery -->
@@ -106,5 +147,23 @@
 		<script src="js/prism.js"></script>
 		<!-- livereload -->
 		<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+		    <script> 
+    $(function(){
+      $("#ex1").load("sample_code/page1.html"); 
+    });
+    </script> 
+    <script>
+    		$('.view-sauce').click(function(){
+		var $this = $(this);
+		$this.toggleClass('view-sauce');
+		if($this.hasClass('view-sauce')){
+			$this.text('View Source Code');	
+			$this.toggleClass('btn-warning');		
+		} else {
+			$this.text('Hide Source Code');
+			$this.toggleClass('btn-warning');
+		}
+	});
+    </script>
 	</body>
 </html>
