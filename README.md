@@ -8,3 +8,11 @@ This repo contains code and examples to accompany the web development course.
 4. Bootstrap/Frameworks
 5. Testing
 6. Hosting
+
+##TODO
+
+[] Add comments to sample code
+[] Get multiple examples on each page
+[] Enable "Search" functionality
+[] Add **Links** page
+ 
