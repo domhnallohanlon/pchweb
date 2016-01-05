@@ -12,7 +12,11 @@ This repo contains code and examples to accompany the web development course.
 ##TODO
 
 [] Add comments to sample code
+
 [] Get multiple examples on each page
+
 [] Enable "Search" functionality
+
+
 [] Add **Links** page
  
