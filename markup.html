@@ -100,7 +100,7 @@
 				HTML, or Hypertext Markup Language is the language of the web. It gives structure to web pages by controlling where text, images, links, lists and forms are placed on a page. The aesthetic appearance is controled with<a href="styles.html"> style sheets,</a> which we will cover in greater detail in the next section.
 			</div> <!-- end of row -->
 			<div class="row">
-				<h3>Example 1</h3>
+				<h3>Example 1: Elements</h3>
 				<p>This first example creates a simple HTML document with two sections, the head and the body. On the body of the page we then display some text, formatted in a variety of different ways.</p>
 				<p>
 					We start off by introducing pairs of tags, such as the opening and closing document tags, <code class="language-markup"> <html></html> </code>
@@ -141,7 +141,49 @@
 				    </div>
 				  </div>
 				</div>
-			</div>
+			</div> <!-- end of row 1 -->
+			<div class="row">
+				<h3>Example 2: Forms</h3>	
+				<p>
+					Even if you don't know what the individual elements are called, you are already familiar with HTML forms. They contain elements like buttons and text boxes for gathering user inputs. 
+				</p>
+				<!-- Button trigger modal -->
+				<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#pre2">
+				  Preview this Example
+				</button>
+
+				<button class="btn btn-primary btn-lg view-sauce" type="button" data-toggle="collapse" data-target="#src2" aria-expanded="false" aria-controls="src2">
+				  View Source Code
+				</button>
+
+				<a href="sample_code/formElements.html" target="_blank" class="btn btn-primary btn-lg">Open in New Tab</a>
+
+				<div class="collapse" id="src2">
+				  <div class="well">
+				    <pre data-src="sample_code/formElements.html">
+
+				    </pre>
+				  </div>
+				</div>
+
+				<!-- Modal -->
+				<div class="modal fade" id="pre2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				  <div class="modal-dialog" role="document">
+				    <div class="modal-content">
+				      <div class="modal-header">
+				        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				        <h4 class="modal-title" id="myModalLabel">Domhnall's Page</h4>
+				      </div>
+				      <div class="modal-body" id="ex2">
+								
+				      </div>
+				      <div class="modal-footer">
+				        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+			</div> <!-- end of row 2 -->
 		</div> <!-- end of container -->
 
 		<!-- jQuery -->
@@ -152,16 +194,16 @@
 		<!-- livereload -->
 		<script>
 		
-		 // document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
+		 document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
 
 		</script>
 		<script> 
     $(function(){
       $("#ex1").load("sample_code/page1.html"); 
+      $("#ex2").load("sample_code/formElements.html"); 
     });
-    </script> 
-    <script>
-    		$('.view-sauce').click(function(){
+
+	$('.view-sauce').click(function(){
 		var $this = $(this);
 		$this.toggleClass('view-sauce');
 		if($this.hasClass('view-sauce')){
